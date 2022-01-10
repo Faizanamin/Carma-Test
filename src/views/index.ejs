@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Credit Card</title>
+
+  <!-- Styles -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <meta name="robots" content="noindex,follow" />
+</head>
+
+<body>
+  <form class="credit-card" action="/users/" method="post">
+    <div class="form-header">
+      <h4 class="title">Credit card detail</h4>
+    </div>
+
+    <div class="form-body">
+      <!-- Card Number -->
+      <input type="text" name="name" class="card-number" placeholder="Card Holder Name" maxlength="16" required>
+
+      <input type="text" name="cardNumber" class="card-number" placeholder="Card Number" maxlength="16" minlength="16"
+        required>
+
+      <!-- Date Field -->
+      <div class="date-field">
+        <div class="month">
+          <select name="month" required>
+            <option value="january">January</option>
+            <option value="february">February</option>
+            <option value="march">March</option>
+            <option value="april">April</option>
+            <option value="may">May</option>
+            <option value="june">June</option>
+            <option value="july">July</option>
+            <option value="august">August</option>
+            <option value="september">September</option>
+            <option value="october">October</option>
+            <option value="november">November</option>
+            <option value="december">December</option>
+          </select>
+        </div>
+        <div class="year">
+          <select name="year" required>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Card Verification Field -->
+      <div class="card-verification">
+        <div class="cvv-input">
+
+          <input type="text" name="cvv" placeholder="CVV" maxlength="3" minlength="3" required>
+
+        </div>
+        <div class="cvv-details">
+          <p>Enter 3 digit cvv</p>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <button type="submit" class="proceed-btn">Proceed</button>
+
+      <div class="form-header">
+        <h4 class="title-success">
+          <%= data %>
+        </h4>
+        <h4 class="title-error">
+          <%= error %>
+        </h4>
+
+      </div>
+    </div>
+  </form>
+  <form action="/" method="get">
+
+
+    <div class="form-body">
+
+      <button type="submit" class="proceed-btn">Clear Data</button>
+
+    </div>
+  </form>
+</body>
+
+</html>
